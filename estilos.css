@@ -1,0 +1,74 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.p1,.p2,.p3,.p4,.p5,.p6{
+  position: absolute;
+  transform: translateY(100px);
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: animation 8s infinite;
+  background-color: red;
+  z-index: 6;
+}
+.p2{
+  background-color: blue;
+  animation: animation 8s infinite .05s;
+  z-index: 5;
+}
+.p3{
+  background-color: yellow;
+  animation: animation 8s infinite .1s;
+  z-index: 4;
+}
+.p4{
+  background-color: purple;
+  animation: animation 8s infinite .15s;
+  z-index: 3;
+}
+.p5{
+  background-color: fuchsia;
+  animation: animation 8s infinite .2s;
+  z-index: 2;
+}
+.p6{
+  background-color: green;
+  animation: animation 8s infinite .25s;
+  z-index: 1;
+}
+@keyframes animation {
+  0%{
+    transform: translateY(100px) rotate(0deg);
+    transform-origin: top;
+  }
+  16.6%{
+    transform: translateY(100px) rotate(60deg);
+    transform-origin: top;
+  }
+  33.2%{
+    transform: translateY(100px) rotate(120deg);
+    transform-origin: top;
+  }
+  49.8%{
+    transform: translateY(100px) rotate(180deg);
+    transform-origin: top;
+  }
+  66.4%{
+    transform: translateY(100px) rotate(240deg);
+    transform-origin: top;
+  }
+  83%{
+    transform: translateY(100px) rotate(300deg);
+    transform-origin: top;
+  }
+  100%{
+    transform: translateY(100px) rotate(360deg);
+    transform-origin: top;
+  }
+}
